@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel='stylesheet' href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/fonts/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/lightslider.css">
+
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <!-- js-link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/js/JQuery3.3.1.js"></script>
+    <script src="./assets/js/lightslider.js"></script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__content">
+            <div class="header__logo">
+                <a href="">
+                    <img src="./assets/image/logo/1.png" alt="">
+                </a>
+            </div>
+        
+            <div class="header__search header__search-pc">
+                <input type="text" placeholder="Search here...">
+                <button><i class="bi bi-search"></i></button>
+            </div>
+
+            <div class="header__actions">  
+                <div class="header__action-mobile">
+                    <div>
+                        <label for="mobile-menu-checkbox" class="sidebar__mobile-menu">
+                            <i class="sidebar__mobile-menu-icon header__action-mobile-icon bi bi-text-left"></i>
+                        </label>
+                        <input type="checkbox" hidden id="mobile-menu-checkbox" class="sidebar__menu-checkbox">
+                        <label for="mobile-menu-checkbox" class="sidebar__overlay"></label>
+            
+                        <div class="sidebar__mobile">
+                            <div class="scrollbar" id="style-1">
+                                <div class="force-overflow">
+                                    <div class="sidebar__logo">
+                                        <a href="index.html">
+                                            <img src="./assets/image/logo/2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <ul class="sidebar__nav">
+                                        <li class="sidebar__nav-item">
+                                            <a href="index.html">
+                                                <span><i class="bi bi-house"></i></span>
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="album.html">
+                                                <span><i class="bi bi-collection"></i></span>
+                                                <span>Albums</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="artist.html">
+                                                <span><i class="bi bi-person"></i></span>
+                                                <span>Artists</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="new-releases.html">
+                                                <span><i class="bi bi-music-note-beamed"></i></span>
+                                                <span>Releases</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="station.html">
+                                                <span><i class="bi bi-broadcast-pin"></i></span>
+                                                <span>Stations</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="download.html">
+                                                <span><i class="bi bi-download"></i></span>
+                                                <span>Downloads</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="favourite.html">
+                                                <span><i class="bi bi-heart"></i></span>
+                                                <span>Favourites</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="history.html">
+                                                <span><i class="bi bi-clock-history"></i></span>
+                                                <span>History</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="sidebar__nav-mode">
+                                        <div class="dark-mode-text">
+                                            <i class="bi bi-moon-fill"></i>
+                                            <span>Dark Mode</span>
+                                        </div>
+                                        <i class="bi bi-toggle2-off toggle-switch-icon" id="theme-btn-2"></i>
+                                    </div>
+                                    <div class="sidebar__nav-mode">
+                                        <div class="dark-mode-text">
+                                            <i class="bi bi-gear-fill"></i>
+                                            <span>Setting</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header__search header__search-mobile">
+                        <input type="text" placeholder="Search here...">
+                        <button><i class="bi bi-search"></i></button>
+                    </div>
+    
+                    <div class="header__action header__notify--has-notify">
+                        <button class="header__action-btn header__notify-icon">
+                            <i class="header__action-mobile-icon bi bi-bell icon-bell"></i>
+                        </button>
+                        <span class="header__notify-notice">4</span>
+                        <div class="header__notify">
+                            <header class="header__notify-heading">
+                                <h3>All Notifications (4)</h3>
+                            </header>
+                            <ul class="header__notify-list header__notify-item--viewed">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-2.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">New Music Every Day 🎶</span>
+                                            <span class="header__notify-desc">Update the newly released songs to refresh your Playlist</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-5.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Happy Time 😄</span>
+                                            <span class="header__notify-desc">Press Play and feel fun through music!</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-6.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Acoustic Selection 🎸</span>
+                                            <span class="header__notify-desc">Relax with rustic acoustic dedicated copies for you</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-8.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">US-UK The A-List 🎼</span>
+                                            <span class="header__notify-desc">Grade A stars of American Music Village will not disappoint you</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header__notify-footer">
+                                <a href="" class="header__notify-footer-btn">View more</a>
+                            </footer>  
+                        </div>
+                    </div>
+        
+                    <div class="header__action header__action-user">
+                        <button class="header__action-btn">
+                            <i class="bi bi-person-circle icon-person"></i>
+                        </button>
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-person-circle"></i></span>
+                                <a href="">My Profile</a>
+                            </li>
+                            <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                <span><i class="bi bi-box-arrow-right"></i></span>
+                                <a href="">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="header__action-tablet">
+                    <div class="tablet-search">
+                        <label for="tablet-search-checkbox" class="header__tablet-search">
+                            <i class="header__tablet-search-icon bi bi-search"></i>
+                        </label>
+                        <input type="checkbox" hidden id="tablet-search-checkbox" class="tablet__search-checkbox">
+                        
+                        <div class="header__search header__search-tablet">
+                            <div class="tablet-search-input">
+                                <input type="text" placeholder="Search here...">
+                                <button><i class="bi bi-search"></i></button>
+                            </div>
+                            
+                            <label for="tablet-search-checkbox" class="header__tablet-close">
+                                <i class="bi bi-x-lg close"></i>
+                            </label>
+                        </div>
+                    </div>
+    
+                    <div class="header__action header__notify--has-notify">
+                        <button class="header__action-btn header__notify-icon">
+                            <i class="header__action-mobile-icon bi bi-bell icon-bell"></i>
+                        </button>
+                        <span class="header__notify-notice">4</span>
+                        <div class="header__notify">
+                            <header class="header__notify-heading">
+                                <h3>All Notifications (4)</h3>
+                            </header>
+                            <ul class="header__notify-list header__notify-item--viewed">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-2.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">New Music Every Day 🎶</span>
+                                            <span class="header__notify-desc">Update the newly released songs to refresh your Playlist</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-5.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Happy Time 😄</span>
+                                            <span class="header__notify-desc">Press Play and feel fun through music!</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-6.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Acoustic Selection 🎸</span>
+                                            <span class="header__notify-desc">Relax with rustic acoustic dedicated copies for you</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-8.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">US-UK The A-List 🎼</span>
+                                            <span class="header__notify-desc">Grade A stars of American Music Village will not disappoint you</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header__notify-footer">
+                                <a href="" class="header__notify-footer-btn">View more</a>
+                            </footer>  
+                        </div>
+                    </div>
+
+                    <div class="header__action header__action-user">
+                        <button class="header__action-btn">
+                            <i class="bi bi-person-circle icon-person"></i>
+                        </button>
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-person-circle"></i></span>
+                                <a href="">My Profile</a>
+                            </li>
+                            <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                <span><i class="bi bi-box-arrow-right"></i></span>
+                                <a href="">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <label for="tablet-menu-checkbox" class="sidebar__tablet-menu">
+                            <i class="sidebar__tablet-menu-icon bi bi-text-right"></i>
+                        </label>
+                        <input type="checkbox" hidden id="tablet-menu-checkbox" class="sidebar__menu-checkbox">
+                        <label for="tablet-menu-checkbox" class="sidebar__overlay"></label>
+
+                        <div class="sidebar__tablet">
+                            <div class="scrollbar" id="style-1">
+                                <div class="force-overflow">
+                                    <div class="sidebar__logo">
+                                        <a href="index.html">
+                                            <img src=".//assets/image/logo/2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <ul class="sidebar__nav">
+                                        <li class="sidebar__nav-item">
+                                            <a href="index.html">
+                                                <span><i class="bi bi-house"></i></span>
+                                                <span>Home</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="album.html">
+                                                <span><i class="bi bi-collection"></i></span>
+                                                <span>Albums</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="artist.html">
+                                                <span><i class="bi bi-person"></i></span>
+                                                <span>Artists</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="new-releases.html">
+                                                <span><i class="bi bi-music-note-beamed"></i></span>
+                                                <span>Releases</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="station.html">
+                                                <span><i class="bi bi-broadcast-pin"></i></span>
+                                                <span>Stations</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="download.html">
+                                                <span><i class="bi bi-download"></i></span>
+                                                <span>Downloads</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="favourite.html">
+                                                <span><i class="bi bi-heart"></i></span>
+                                                <span>Favourites</span>
+                                            </a>
+                                        </li>
+                                        <li class="sidebar__nav-item">
+                                            <a href="history.html">
+                                                <span><i class="bi bi-clock-history"></i></span>
+                                                <span>History</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="sidebar__nav-mode">
+                                        <div class="dark-mode-text">
+                                            <i class="bi bi-moon-fill"></i>
+                                            <span>Dark Mode</span>
+                                        </div>
+                                        <i class="bi bi-toggle2-off toggle-switch-icon" id="theme-btn-1"></i>
+                                    </div>
+                                    <div class="sidebar__nav-mode">
+                                        <div class="dark-mode-text">
+                                            <i class="bi bi-gear-fill"></i>
+                                            <span>Setting</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+    
+                </div>
+
+                <div class="header__action-desktop">
+                     <div class="header__action header__notify--has-notify">
+                        <button class="header__action-btn header__notify-icon">
+                            <i class="header__action-mobile-icon bi bi-bell icon-bell"></i>
+                        </button>
+                        <span class="header__notify-notice">4</span>
+                        <div class="header__notify">
+                            <header class="header__notify-heading">
+                                <h3>All Notifications (4)</h3>
+                            </header>
+                            <ul class="header__notify-list header__notify-item--viewed">
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-2.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">New Music Every Day 🎶</span>
+                                            <span class="header__notify-desc">Update the newly released songs to refresh your Playlist</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-5.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Happy Time 😄</span>
+                                            <span class="header__notify-desc">Press Play and feel fun through music!</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-6.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">Acoustic Selection 🎸</span>
+                                            <span class="header__notify-desc">Relax with rustic acoustic dedicated copies for you</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link">
+                                        <img src="./assets/image/albums/album-8.png" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name">US-UK The A-List 🎼</span>
+                                            <span class="header__notify-desc">Grade A stars of American Music Village will not disappoint you</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <footer class="header__notify-footer">
+                                <a href="" class="header__notify-footer-btn">View more</a>
+                            </footer>  
+                        </div>
+                    </div>
+                    <div class="header__action header__action-theme">
+                        <button class="header__action-btn">
+                            <i class="bi bi-moon change-theme" id="theme-btn"></i>
+                        </button>
+                    </div>
+                    <div class="header__action header__action-setting">
+                        <button class="header__action-btn">
+                            <i class="bi bi-gear icon-gear"></i>
+                        </button>
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-exclamation-circle"></i></span>
+                                <a href="">Introduce</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-flag"></i></span>
+                                <a href="">Feedback</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-telephone"></i></span>
+                                <a href="">Contact</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-card-list"></i></span>
+                                <a href="">Terms of use</a>
+                            </li>
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-shield-check"></i></span>
+                                <a href="">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__action header__action-user">
+                        <button class="header__action-btn">
+                            <i class="bi bi-person-circle icon-person"></i>
+                        </button>
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item">
+                                <span><i class="bi bi-person-circle"></i></span>
+                                <a href="">My Profile</a>
+                            </li>
+                            <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                <span><i class="bi bi-box-arrow-right"></i></span>
+                                <a href="">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar__logo">
+            <a href="index.html">
+                <img src="./assets/image/logo/1.png" alt="">
+            </a>
+        </div>
+        <ul class="sidebar__nav">
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-house"></i></span>
+                <a href="index.html">Home</a>
+            </li>
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-collection"></i></span>
+                <a href="album.html">Albums</a>
+            </li>
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-person"></i></span>
+                <a href="artist.html">Artists</a>
+            </li>
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-music-note-beamed"></i></span>
+                <a href="new-releases.html">Releases</a>
+            </li>
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-broadcast-pin"></i></span>
+                <a href="station.html">Stations</a>
+            </li>
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-download"></i></span>
+                <a href="download.html">Downloads</a>
+            </li>
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-heart"></i></span>
+                <a href="favourite.html">Favourites</a>
+            </li>
+            <li class="sidebar__nav-item">
+                <span><i class="bi bi-clock-history"></i></span>
+                <a href="history.html">History</a>
+            </li>
+        </ul>
+    </div>
+    <!-- End sidebar -->
+
+
+    <!-- Main -->
+    <div class="main">
+        <div class="container-fluid">
+
+            <section class="download-songs mbt-36">
+                <h1 class="download-songs-heading">Your Favourites</h1>
+                <div class="download-songs-item">
+                    <div class="download-songs-header">
+                        <div class="row">
+                            <div class="col l-2 m-2 c-2">
+                                <strong>#</strong>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <strong>Song Title</strong>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <strong>Album Title</strong>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <strong>Duration</strong>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <strong>Add To Favourites</strong>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <strong>More</strong>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="download-songs-body">
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>01</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Bloodlust</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Dream Your Moments</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>02</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Walking Promisesu</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>03</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Dark Alley Acoustic</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>04</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Desired Games</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>05</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>The Heartbeat Stops</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>06</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Bloodlust</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Dream Your Moments</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>07</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Walking Promisesu</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>08</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Dark Alley Acoustic</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>09</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Desired Games</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                        <div class="row pd-20">
+                            <div class="col l-2 m-2 c-2">
+                                <span>10</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>Until I Met You</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>The Heartbeat Stops</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span>3:50</span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-heart-fill icon-favourite"></i></span>
+                            </div>
+                            <div class="col l-2 m-2 c-2">
+                                <span><i class="bi bi-three-dots"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-artist-btn mt-36">
+                        <button class="btn">View more</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <!-- showcase--------- -->
+                <!-- heading---------- -->
+                <h1 class="showcase-heading">Recently Played</h1>
+
+                <ul id="autoWidth" class="cs-hidden">
+                    <!-- box-1 -->
+                    <li class="box-item item-a">
+                        <!-- showcase-box -->
+                        <div class="home__content-releases-item">
+                            <div class="home__content-releases-overlay">
+                                <div class="showcase-box">
+                                    <img src="./assets/image/albums/album11.png" alt="" class="home__content-releases-img">
+                                </div>
+                                <div class="home__content-releases-action">
+                                    <div class="action-btn btn--heart">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="action-btn--play">
+                                        <i class="bi bi-play-fill"></i>
+                                    </div>
+                                    <div class="action-btn btn--three-dots">
+                                        <i class="bi bi-three-dots"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-text">
+                            <strong>Upbeat Rock</strong>
+                            <p>VIZE & Alan Walker</p>
+                        </div>
+                    </li>
+
+                    <!-- box-2 -->
+                    <li class="box-item item-b">
+                        <!-- showcase-box -->
+                        <div class="home__content-releases-item">
+                            <div class="home__content-releases-overlay">
+                                <div class="showcase-box">
+                                    <img src="./assets/image/albums/album-6.png" alt="" class="home__content-releases-img">
+                                </div>
+                                <div class="home__content-releases-action">
+                                    <div class="action-btn btn--heart">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="action-btn--play">
+                                        <i class="bi bi-play-fill"></i>
+                                    </div>
+                                    <div class="action-btn btn--three-dots">
+                                        <i class="bi bi-three-dots"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-text">
+                            <strong>Got What I Got</strong>
+                            <p>VIZE & Alan Walker</p>
+                        </div>
+                    </li>
+
+                    <!-- box-3 -->
+                    <li class="box-item item-c">
+                        <!-- showcase-box -->
+                        <div class="home__content-releases-item">
+                            <div class="home__content-releases-overlay">
+                                <div class="showcase-box">
+                                    <img src="./assets/image/albums/album13.png" alt="" class="home__content-releases-img">
+                                </div>
+                                <div class="home__content-releases-action">
+                                    <div class="action-btn btn--heart">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="action-btn--play">
+                                        <i class="bi bi-play-fill"></i>
+                                    </div>
+                                    <div class="action-btn btn--three-dots">
+                                        <i class="bi bi-three-dots"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-text">
+                            <strong>Righteous</strong>
+                            <p>VIZE & Alan Walker</p>
+                        </div>
+                    </li>
+
+                    <!-- box-4 -->
+                    <li class="box-item item-d">
+                        <!-- showcase-box -->
+                        <div class="home__content-releases-item">
+                            <div class="home__content-releases-overlay">
+                                <div class="showcase-box">
+                                    <img src="./assets/image/albums/album7.png" alt="" class="home__content-releases-img">
+                                </div>
+                                <div class="home__content-releases-action">
+                                    <div class="action-btn btn--heart">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="action-btn--play">
+                                        <i class="bi bi-play-fill"></i>
+                                    </div>
+                                    <div class="action-btn btn--three-dots">
+                                        <i class="bi bi-three-dots"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="showcase-text">
+                            <strong>Got It On Me</strong>
+                            <p>VIZE & Alan Walker</p>
+                        </div>
+                    </li>
+
+                    <!-- box-5 -->
+                    <li class="box-item item-e">
+                        <!-- showcase-box -->
+                        <div class="home__content-releases-item">
+                            <div class="home__content-releases-overlay">
+                                <div class="showcase-box">
+                                    <img src="./assets/image/releases/releases-cover6.jpg" alt="" class="home__content-releases-img">
+                                </div>
+                                <div class="home__content-releases-action">
+                                    <div class="action-btn btn--heart">
+                                        <i class="bi bi-heart"></i>
+                                    </div>
+                                    <div class="action-btn--play">
+                                        <i class="bi bi-play-fill"></i>
+                                    </div>
+                                    <div class="action-btn btn--three-dots">
+                                        <i class="bi bi-three-dots"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-text">
+                            <strong>Girls In The Hood</strong>
+                            <p>VIZE & Alan Walker</p>
+                        </div>
+                    </li>
+
+                </ul>
+            </section>
+
+             <!-- Footer -->
+             <footer>
+                <div class="row">
+                    <div class="col l-3 m-6 c-12">
+                        <h2 class="footer-heading">The Music Player</h2>
+                        <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.</p>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <h2 class="footer-heading">Download Our App</h2>
+                        <p class="footer-text">Go Mobile with our app.
+                            Listen to your favourite songs at just one click. Download Now !
+                        </p>
+                        <img src="./assets/image/download.svg" alt="" class="footer-img">
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <h2 class="footer-heading">Subscribe</h2>
+                        <p class="footer-text">Subscribe to our newsletter and get latest updates and offers.</p>
+                        <input type="text" placeholder="Enter Your Email" class="footer-input">
+                        <button class="btn footer-btn">Sign Me Up</button>
+                    </div>
+                    <div class="col l-3 m-6 c-12">
+                        <h2 class="footer-heading">Contact Us</h2>
+                        <div class="footer-info">
+                            <i class="bi bi-telephone-inbound-fill footer-icon"></i>
+                            <span class="footer-text">Call Us: 0987 654 321</span>
+                        </div>
+                        <div class="footer-info">
+                            <i class="bi bi-envelope-fill footer-icon"></i>
+                            <span class="footer-text">Email Us: demo@gmail.com</span>
+                        </div>
+                        <div class="footer-info">
+                            <i class="bi bi-geo-alt-fill footer-icon"></i>
+                            <span class="footer-text">Walk In: Ho Chi Minh City</span>
+                        </div>
+                        <h2 class="footer-heading footer-follow-us">Follow Us</h2>
+                        <div>
+                            <i class="bi bi-facebook footer-icon icon-facebook"></i>
+                            <i class="bi bi-instagram footer-icon icon-instagram"></i>
+                            <i class="bi bi-twitter footer-icon icon-twitter"></i>
+                            <i class="bi bi-youtube footer-icon icon-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+    <!-- End main -->
+
+    
+
+    <!-- Control -->
+    <div class="container-fluid">
+        <div class="playlist">
+            <div class="row">
+                <div class="col l-12 m-12 c-12">
+                    <div class="player row">
+                        <div class="song-details col l-4 m-5 c-12">
+                            <div class="song-playing">
+                                <div class="cd">
+                                    <div class="cd-thumb"></div>
+                                </div>
+                                <div class="song-info">
+                                    <div class="song-name">
+                                        <h3>Let's Fall In Love For The Night</h3>
+                                    </div>
+                                    <div class="song-artist">
+                                        <p>FINNEAS</p>
+                                    </div>
+                                    <input type="range" class="progress-1" id="progress-1" min="1" max="100" value="0" step="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-music col l-4 m-3 c-0">
+                            <div class="current-time"></div>
+                            <input type="range" class="progress" id="progress" min="1" max="100" value="0" step="1">
+                            <div class="total-duration"></div>
+                        </div>
+                        <div class="audio-actions col l-4 m-4 c-12">
+                            <div class="repeat-btn"><i class="bi bi-arrow-repeat repeat-icon"></i></div>
+                            <div class="previous-btn"><i class="bi bi-skip-start-fill pre-icon"></i></div>
+                            <div class="play-btn">
+                                <i class="bi bi-play-fill play-icon"></i>
+                                <i class="bi bi-pause-fill pause-icon"></i>
+                            </div>
+                            <div class="next-btn"><i class="bi bi-skip-end-fill next-icon"></i></div>
+                            <div class="random-btn"><i class="bi bi-shuffle random-icon"></i></div>
+                        </div>
+                        <audio id="audio" src=""></audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- slider-script -->
+    <script>
+        $(document).ready(function() {
+            $('#autoWidth, #autoWidth1').lightSlider({
+                autoWidth:true,
+                loop:true,
+                onSliderLoad: function() {
+                    $('#autoWidth, #autoWidth1').removeClass('cS-hidden');
+                } 
+            });  
+        });
+    </script>
+
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
