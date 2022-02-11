@@ -1,9 +1,5 @@
 /* Mobile $ tablet */
 @media (max-width: 1023px) {
-    .header__search {
-        /* display: none; */
-    }
-
     .header__action-btn i {
         font-size: 1.8rem;
     }

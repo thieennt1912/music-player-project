@@ -7,7 +7,6 @@
     --container-color: #fefefe;
     --player-color: #120c1c;
     --icon-color: #acb4c0;
-    /* --primary-color: #fd2d55; */
     --primary-color: hsl(348, 98%, 58%);
     --title-color: #3a3a3e;
     --hue-color: 348;
@@ -23,7 +22,6 @@
 html {
     font-size: 62.5%;
     line-height: 1.6rem;
-    /* font-family: 'Inter', sans-serif; */
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     scroll-behavior: smooth;
