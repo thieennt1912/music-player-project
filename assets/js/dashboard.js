@@ -166,6 +166,11 @@ const app = {
     handleEvents: function() {
         _this = this
 
+        // Thu gon dashboard
+        toggle.onclick = function() {
+            player.classList.toggle('close')
+        }
+
         // Xử lý CD quay / dừng
         const cdThumbAnimate = cdThumb.animate([
             { transform: 'rotate(360deg)'}
@@ -271,11 +276,6 @@ const app = {
             }else {
                 nextBtn.click()
             }
-        }
-
-        // Thu gon dashboard
-        toggle.onclick = function() {
-            player.classList.toggle('close')
         }
     },
 
