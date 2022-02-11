@@ -492,7 +492,12 @@
     }
 
     .header__notify {
-        width: 310px;
+        width: 300px;
+        right: -55%;
+    }
+
+    .header__notify::before {
+        right: 16px;
     }
 
     .header__notify-notice {
@@ -806,11 +811,13 @@
 
     .home__content-releases-info h3 {
         font-size: 1.2rem;
+        font-weight: 500;
         margin: 4px 0;
     }
     
     .home__content-releases-info p {
         font-size: 1rem;
+        font-weight: 300;
         margin: 2px 0;
     }
 
@@ -909,9 +916,14 @@
         padding-left: 8px;  
     }
 
+    /* .box-item {
+        width: 100px;
+        height: 90px;
+    } */
+
     .showcase-box {
-        width: 98px;
-        height: 98px;
+        width: 100px;
+        height: 100px;
     }
     
     .showcase-box img {
@@ -925,16 +937,22 @@
         font-size: 1.7rem;
         padding-bottom: 10px;
     }
+
+    .showcase-text {
+        width: 110px;
+    }
     
     .showcase-text strong {
         padding-top: 2px;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-bottom: 6px;
+        font-weight: 500;
     }
     
     .showcase-text p {
         font-size: 1.1rem;
         margin: 0;
+        font-weight: 300;
     }
 
     .box-item {

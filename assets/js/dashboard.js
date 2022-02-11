@@ -19,6 +19,8 @@ const playlist = a$('.playlist')
 const currTime = a$('.current-time')
 const totalDuration = a$('.total-duration')
 
+const toggle = a$('.toggle-icon')
+
 const app = {
     currentIndex: 0,
     isPlaying: false,
@@ -270,6 +272,11 @@ const app = {
             }else {
                 nextBtn.click()
             }
+        }
+
+        // Thu gon dashboard
+        toggle.onclick = function() {
+            player.classList.toggle('close')
         }
     },
 
