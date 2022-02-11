@@ -19,12 +19,13 @@ const playlist = a$('.playlist')
 const currTime = a$('.current-time')
 const totalDuration = a$('.total-duration')
 
+const toggle = a$('.toggle-icon')
+
 const app = {
     currentIndex: 0,
     isPlaying: false,
     isRandom: false,
     isRepeat: false,
-    // config: JSON.parse(localStorage.getItem(PLAYER_STORAGE_KEY)) || {},
 
     songs: [
         {
@@ -270,6 +271,11 @@ const app = {
             }else {
                 nextBtn.click()
             }
+        }
+
+        // Thu gon dashboard
+        toggle.onclick = function() {
+            player.classList.toggle('close')
         }
     },
 
